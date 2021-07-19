@@ -1,0 +1,13 @@
+overwrite: true
+schema: "schema.graphql"
+documents: "*.ts"
+generates:
+  generated.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-compatibility"
+    config:
+      skipTypename: true
+      noNamespaces: true
+      preResolveTypes: true

@@ -1,0 +1,19 @@
+{
+  "name": "graphql-codegen-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "graphql": "15.5.1"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "1.21.7",
+    "@graphql-codegen/typescript": "1.23.0",
+    "@graphql-codegen/typescript-compatibility": "2.1.5",
+    "@graphql-codegen/typescript-operations": "1.18.4"
+  },
+  "scripts": {
+    "gql": "graphql-codegen --config codegen.yml",
+    "gql:compatibility": "graphql-codegen --config codegen-typescript-compatibility.yml"
+  }
+}

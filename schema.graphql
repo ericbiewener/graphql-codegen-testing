@@ -1,0 +1,26 @@
+interface Creature {
+  age: Int!
+}
+
+type Person implements Creature {
+  age: Int!
+  name: String!
+}
+
+type Animal implements Creature {
+  age: Int!
+  claws: Boolean!
+}
+
+type Meta {
+  data: Person
+}
+
+type Foo {
+  id: String!
+  meta: Meta
+}
+
+type Query {
+  foo: Foo
+}
