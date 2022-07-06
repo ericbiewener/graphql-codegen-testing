@@ -2,7 +2,7 @@ overwrite: true
 schema: "schema.graphql"
 documents: "*.ts"
 generates:
-  generated.ts:
+  generated-typescript-compatibility.ts:
     plugins:
       - "typescript"
       - "typescript-operations"
@@ -10,4 +10,4 @@ generates:
     config:
       skipTypename: true
       noNamespaces: true
-      preResolveTypes: true
+      # preResolveTypes: true

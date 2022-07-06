@@ -51,3 +51,11 @@ export type GetFooQuery = { foo?: Maybe<(
     Pick<Foo, 'id'>
     & { meta?: Maybe<{ data?: Maybe<SomeFragment_Person_Fragment> }> }
   )> };
+
+type DiscriminateUnion<T, U> = T extends U ? T : never;
+
+export type SomeFragmentPersonInlineFragment = (DiscriminateUnion<SomeFragmentFragment, { __typename?: 'Person' }>);
+export type GetFooVariables = GetFooQueryVariables;
+export type GetFooFoo = GetFooQuery['foo'];
+export type GetFooMeta = GetFooFoo['meta'];
+export type GetFooData = GetFooQuery['foo']['meta']['data'];
